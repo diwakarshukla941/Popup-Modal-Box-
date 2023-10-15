@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+    </div>
+    <div class="popup" id="popup">
+        <img src="images/Tick.png" alt="popup" width="200px" height="200px">
+        <H2>Thank You</H2>
+        <P>Your details have been successfully submitted Thanks!</P>
+        <button class="pushable" onclick="closePopup()">
+            <span class="front">
+             OK
+            </span>
+        </button>
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
+        function openPopup(){
+            popup.classList.add("openPopup")
+        }
+        function closePopup(){
+            popup.classList.remove("openPopup")
+        }
+    </script>
+</body>
+</html>
